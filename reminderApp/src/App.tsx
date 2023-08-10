@@ -6,20 +6,17 @@ import reminderServices from "./services/reminder";
 import reminder from "./services/reminder";
 import NewReminder from "./componets/NewReminder";
 
-
-
 function App() {
   const [Reminder, setReminder] = useState<Reminder[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error,setError] = useState("");
-  
-useEffect(() =>{
-  loadReminders();
-}, [])
-  
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    loadReminders();
+  }, []);
 
   const loadReminders = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
 
     try {
       const reminders = await reminderServices.getReminders();
@@ -28,7 +25,7 @@ useEffect(() =>{
       setError("Error loading, please try again.");
     }
 
-    setIsLoading(false)
+    setIsLoading(false);
   };
 
   const removeReminder = (id: number) => {
@@ -41,6 +38,7 @@ useEffect(() =>{
 
   return (
     <div className="App">
+      <h1 className="remind text-center color text-white">Reminder List</h1>
       <NewReminder onAddReminder={addReminder} />
       {isLoading && <div className="spinner-border"></div>}
       {error && <div className="text-danger">{error}</div>}

@@ -27,7 +27,7 @@ const NewReminder = ({ onAddReminder }: NewReminderProps) => {
         type="text"
         className="form-control"
       />
-      <button type="submit" className="btn btn-primary rounded-pill my-4">
+      <button type="submit" className="rounded-pill my-4 ">
         ADD
       </button>
     </form>

@@ -1,3 +1,18 @@
 body {
   padding: 20px;
+  background-image: url(../images/markus-spiske-wSQH4iuBeVQ-unsplash.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: center; 
 }
+
+.list-group-item{
+  background-color: transparent !important;
+  font-size: 20px;
+}
+.font{
+  color: azure;
+  font-size: 30px;
+}
+
