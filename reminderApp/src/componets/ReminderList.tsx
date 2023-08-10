@@ -13,7 +13,7 @@ const ReminderList = ({ items, onRemoveReminder }: ReminderListProps) => {
       {items.map((item) => (
         <li className="list-group-item d-flex justify-content-between text-white"  key={item.id}>
           {item.title}
-          <button className="btn btn-outline-danger round-pill" onClick={() => onRemoveReminder(item.id)}>Delete</button>
+          <button className="btn btn-outline-info round-pill" onClick={() => onRemoveReminder(item.id)}>Delete</button>
         </li>
       ))}
     </ul>
